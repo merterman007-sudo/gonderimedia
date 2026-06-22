@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gönderi Medya; sosyal medya yönetimi, dijital reklam, içerik üretimi, kreatif tasarım ve performans reklamcılığı hizmetleri sunan modern reklam ajansıdır." />
+  <meta name="keywords" content="Gönderi Medya, reklam ajansı, sosyal medya yönetimi, dijital reklam, içerik üretimi, grafik tasarım, marka danışmanlığı, performans reklamcılığı" />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="Gönderi Medya | Dijital Reklam Ajansı" />
+  <meta property="og:description" content="Markanızı dijital dünyada güçlü bir şekilde konumlandıran profesyonel, kurumsal ve premium reklam ajansı." />
+  <meta property="og:type" content="website" />
+  <title>Gönderi Medya | Dijital Reklam Ajansı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Premium atmosfer için arka plan katmanları -->
+  <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home" aria-label="Gönderi Medya ana sayfa">
+        <span class="logo-mark"><img class="site-logo" src="assets/gonderi-medya-logo.jpeg" alt="" aria-hidden="true" loading="eager" /></span>
+        <span class="logo-text">Gönderi Medya</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="primary-navigation">
+        <a href="#home">Ana Sayfa</a>
+        <a href="hizmetler.html">Hizmetler</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#references">Referanslar</a>
+        <a href="#blog">Blog</a>
+        <a href="#process">Süreç</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="lead-section" id="home">
+      <div class="container lead-grid reveal">
+        <div class="lead-copy">
+          <span class="eyebrow">Hızlı Talep Formu</span>
+          <h2>Projenizi bize iletin, ekibimiz size özel dönüş yapsın.</h2>
+          <p>
+            Web sitesine giren ziyaretçilerinizi müşteriye dönüştürmek için ana sayfanın en üstünde sade,
+            güven veren ve hızlı doldurulan bir başvuru alanı oluşturduk.
+          </p>
+          <div class="lead-badges" aria-label="Öne çıkan avantajlar">
+            <span>Kurumsal iletişim</span>
+            <span>Hızlı geri dönüş</span>
+            <span>360° Ajans hizmeti</span>
+            <span>Video ve reklam desteği</span>
+          </div>
+        </div>
+
+        <div class="lead-card">
+          <form class="contact-form lead-form" id="lead-form">
+            <div class="form-row">
+              <label for="lead-name">Ad Soyad</label>
+              <input id="lead-name" name="name" type="text" placeholder="Ad Soyad" required />
+            </div>
+            <div class="form-row">
+              <label for="lead-company">Firma Adı</label>
+              <input id="lead-company" name="company" type="text" placeholder="Firma Adı" required />
+            </div>
+            <div class="form-row">
+              <label for="lead-phone">Telefon</label>
+              <input id="lead-phone" name="phone" type="tel" placeholder="Telefon numaranız" required />
+            </div>
+            <div class="form-row">
+              <label for="lead-email">E-posta</label>
+              <input id="lead-email" name="email" type="email" placeholder="E-posta adresiniz" required />
+            </div>
+            <div class="form-row">
+              <label for="lead-service">Almak İstenen Hizmet</label>
+              <select id="lead-service" name="service" required>
+                <option value="">Hizmet seçiniz</option>
+                <option>Sosyal Medya Yönetimi</option>
+                <option>Meta Reklamları</option>
+                <option>Google Reklamları</option>
+                <option>İçerik Üretimi</option>
+                <option>Grafik Tasarım</option>
+                <option>Marka Danışmanlığı</option>
+                <option>Kurumsal Kimlik</option>
+                <option>Web Site Tasarımı</option>
+                <option>Video Çekimi & Prodüksiyon</option>
+                <option>Kurgu & Montaj</option>
+                <option>Reels & Short Form İçerik</option>
+                <option>Drone & Sahne Çekimi</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="lead-message">Mesaj</label>
+              <textarea id="lead-message" name="message" rows="4" placeholder="Kısaca projenizi anlatın" required></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Talep Oluştur</button>
+            <p class="form-feedback" id="lead-form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Dijital büyüme için stratejik ajans çözümü</span>
+          <h1>Markanızı Dijital Dünyada Güçlü Bir Şekilde Konumlandırıyoruz</h1>
+          <p class="hero-text">
+            Gönderi Medya olarak sosyal medya yönetimi, dijital reklam, kreatif içerik ve performans odaklı pazarlama çözümleriyle markanızın dijital büyümesine destek oluyoruz.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#home">Teklif Al</a>
+            <a class="btn btn-secondary" href="hizmetler.html">Hizmetlerimizi İncele</a>
+          </div>
+          <div class="page-links" aria-label="Alt sayfalar">
+            <a href="hizmetler.html">Hizmetler Sayfası</a>
+            <a href="hakkimizda.html">Hakkımızda Sayfası</a>
+            <a href="referanslar.html">Referanslar Sayfası</a>
+            <a href="blog.html">Blog Sayfası</a>
+            <a href="surec.html">Süreç Sayfası</a>
+            <a href="iletisim.html">İletişim Sayfası</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="visual-card visual-card-main">
+            <div class="visual-topline">Kampanya Yönetimi</div>
+            <div class="visual-meter">
+              <span></span>
+            </div>
+            <div class="visual-metrics">
+              <div>
+                <strong>%128</strong>
+                <span>Erişim artışı</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>Memnuniyet</span>
+              </div>
+            </div>
+          </div>
+          <div class="visual-card visual-card-floating card-a">
+            <span class="mini-label">Sosyal Medya</span>
+            <strong>İçerik akışı</strong>
+          </div>
+          <div class="visual-card visual-card-floating card-b">
+            <span class="mini-label">Reklam Performansı</span>
+            <strong>Dönüşüm odaklı</strong>
+          </div>
+          <div class="visual-card visual-card-floating card-c">
+            <span class="mini-label">Marka Stratejisi</span>
+            <strong>Premium konumlandırma</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section">
+      <div class="container stats-grid reveal">
+        <article class="stat-card">
+          <strong>50+</strong>
+          <span>Marka Deneyimi</span>
+        </article>
+        <article class="stat-card">
+          <strong>1M+</strong>
+          <span>Erişim Hedefi</span>
+        </article>
+        <article class="stat-card">
+          <strong>360°</strong>
+          <span>Dijital Çözümler</span>
+        </article>
+        <article class="stat-card">
+          <strong>Performans</strong>
+          <span>Odaklı Strateji</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section trust-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Resmi Araçlar ve Platformlar</span>
+          <h2>Profesyonel büyüme için kullanılan çalışma ekosistemi</h2>
+          <p>Çalışma yapımızı şeffaf biçimde gösteriyor, markalar için kullanılan profesyonel reklam ve ölçümleme araçlarını düzenli bir çerçevede sunuyoruz.</p>
+        </div>
+
+        <div class="logo-grid">
+          <article class="logo-card reveal">
+            <div class="logo-art">
+              <img class="brand-logo brand-logo-google" src="https://www.gstatic.com/marketing-cms/assets/images/a0/c7/a37cda3447639b52f627e91993ee/ads.webp=s80-fcrop64=1,00000000ffffffff-rw" alt="Google Ads logosu" loading="lazy" />
+            </div>
+            <strong>Google Ads</strong>
+            <span>Arama ve dönüşüm reklamları</span>
+          </article>
+          <article class="logo-card reveal">
+            <div class="logo-art">
+              <img class="brand-logo brand-logo-meta" src="https://about.fb.com/wp-content/uploads/2025/01/Meta_Header.jpg" alt="Meta logosu" loading="lazy" />
+            </div>
+            <strong>Meta Ads</strong>
+            <span>Instagram ve Facebook reklamları</span>
+          </article>
+          <article class="logo-card reveal">
+            <div class="logo-art">
+              <img class="brand-logo brand-logo-google" src="https://www.gstatic.com/marketing-cms/assets/images/0d/4c/fb024fca43c1becf75e2aa55363e/analytics.webp=s80-fcrop64=1,00000000ffffffff-rw" alt="Google Analytics logosu" loading="lazy" />
+            </div>
+            <strong>GA4</strong>
+            <span>Ölçümleme ve analiz</span>
+          </article>
+          <article class="logo-card reveal">
+            <div class="logo-art">
+              <img class="brand-logo brand-logo-google" src="https://www.gstatic.com/marketing-cms/assets/images/43/29/58b9571f4dd78b6ed68523ca734f/google.webp=s80-fcrop64=1,00000000ffffffff-rw" alt="Google logosu" loading="lazy" />
+            </div>
+            <strong>Search Console</strong>
+            <span>Organik görünürlük kontrolü</span>
+          </article>
+          <article class="logo-card reveal">
+            <div class="logo-art">
+              <img class="brand-logo brand-logo-google" src="https://www.gstatic.com/marketing-cms/assets/images/43/29/58b9571f4dd78b6ed68523ca734f/google.webp=s80-fcrop64=1,00000000ffffffff-rw" alt="Google logosu" loading="lazy" />
+            </div>
+            <strong>Looker Studio</strong>
+            <span>Raporlama ve dashboard</span>
+          </article>
+          <article class="logo-card reveal">
+            <div class="logo-art">
+              <img class="brand-logo brand-logo-google" src="https://www.gstatic.com/marketing-cms/assets/images/43/29/58b9571f4dd78b6ed68523ca734f/google.webp=s80-fcrop64=1,00000000ffffffff-rw" alt="Google logosu" loading="lazy" />
+            </div>
+            <strong>Business Profile</strong>
+            <span>Yerel görünürlük yönetimi</span>
+          </article>
+        </div>
+
+        <div class="trust-badges reveal">
+          <span>Kurumsal iletişim</span>
+          <span>Şeffaf raporlama</span>
+          <span>Kreatif üretim</span>
+          <span>Performans yönetimi</span>
+          <span>Ölçülebilir büyüme</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section neon-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Kurumsal Vitrin</span>
+          <h2>Canlı, modern ve dikkat çekici dijital görünüm</h2>
+          <p>Bu alan, markanın dijital vitrininin daha düzenli, daha okunaklı ve daha profesyonel görünmesini sağlar.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-top">
+              <strong>Kampanya Takibi</strong>
+              <span class="feature-badge">01</span>
+            </div>
+            <p>Kahve zemini üzerinde kullanılan yumuşak yeşil ve koyu tonlar, kampanya verilerini sakin ama güçlü biçimde öne çıkarır.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-top">
+              <strong>Kreatif İçerik Akışı</strong>
+              <span class="feature-badge">02</span>
+            </div>
+            <p>Logo, hizmet kartları ve vurgular daha net bir hiyerarşiyle düzenlenerek okunabilirlik artırılır.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-top">
+              <strong>Dönüşüm Odaklı Panel</strong>
+              <span class="feature-badge">03</span>
+            </div>
+            <p>Yeni renk düzeni, siteyi sade tutarken daha premium ve güven veren bir ajans vitrini haline getirir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Hizmetler</span>
+          <h2>Dijital büyüme için uçtan uca çözümler</h2>
+          <p>Markanızın ihtiyaçlarına göre şekillenen, kurumsal ve ölçülebilir hizmet yapısı sunuyoruz.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <h3>Sosyal Medya Yönetimi</h3>
+            <p>Marka tonunuza uygun içerik planlama, yayınlama ve topluluk yönetimi ile dijital görünürlüğünüzü güçlendiririz.</p>
+            <a class="btn btn-secondary service-link" href="sosyal-medya-yonetimi.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Meta Reklamları</h3>
+            <p>Hedef kitle odaklı kampanyalarla erişim, etkileşim ve dönüşüm performansını optimize ederiz.</p>
+            <a class="btn btn-secondary service-link" href="meta-reklamlari.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Google Reklamları</h3>
+            <p>Arama niyeti yüksek kullanıcıları doğru mesajla buluşturarak ölçülebilir geri dönüşler elde ederiz.</p>
+            <a class="btn btn-secondary service-link" href="google-reklamlari.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>İçerik Üretimi</h3>
+            <p>Fotoğraf, video ve metin üretiminde markanızın kurumsal kimliğini yansıtan premium içerikler hazırlarız.</p>
+            <a class="btn btn-secondary service-link" href="icerik-uretimi.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Grafik Tasarım</h3>
+            <p>Sosyal medya, kampanya ve kurumsal iletişim materyallerinde tutarlı ve modern tasarım dili oluştururuz.</p>
+            <a class="btn btn-secondary service-link" href="grafik-tasarim.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Marka Danışmanlığı</h3>
+            <p>Konumlandırma, mesajlama ve büyüme hedeflerine uygun stratejik yol haritaları geliştiririz.</p>
+            <a class="btn btn-secondary service-link" href="marka-danismanligi.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Kurumsal Kimlik</h3>
+            <p>Logodan sunum diline kadar markanızın güven veren kurumsal çerçevesini güçlendiririz.</p>
+            <a class="btn btn-secondary service-link" href="kurumsal-kimlik.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Web Site Tasarımı</h3>
+            <p>Hızlı, responsive ve prestijli web deneyimleriyle dijital vitrininizi profesyonel hale getiririz.</p>
+            <a class="btn btn-secondary service-link" href="web-site-tasarimi.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Video Çekimi & Prodüksiyon</h3>
+            <p>Tanıtım filmi, sosyal medya videosu, reels ve ürün odaklı çekimlerle markanızı daha güçlü anlatırız.</p>
+            <a class="btn btn-secondary service-link" href="video-cekimi-produksiyon.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Kurgu & Montaj</h3>
+            <p>Kısa reklam kurguları, sosyal medya montajları ve ritmi yüksek video editleriyle içerikleri yayınlanmaya hazırlarız.</p>
+            <a class="btn btn-secondary service-link" href="kurgu-montaj.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Reels & Short Form İçerik</h3>
+            <p>Instagram Reels, TikTok ve YouTube Shorts için dikkat çekici, hızlı tüketilen ve dönüşüm destekleyen formatlar üretiriz.</p>
+            <a class="btn btn-secondary service-link" href="reels-short-form-icerik.html">Detayları İncele</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Drone & Sahne Çekimi</h3>
+            <p>Kurumsal çekimlerde mekân, atmosfer ve ürün sunumunu daha premium gösterecek sinematik içerikler hazırlarız.</p>
+            <a class="btn btn-secondary service-link" href="drone-sahne-cekimi.html">Detayları İncele</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-content reveal">
+          <span class="eyebrow">Hakkımızda</span>
+          <h2>Strateji, yaratıcılık ve analiz ile sürdürülebilir büyüme</h2>
+          <p>
+            Gönderi Medya, markaların dijital dünyada daha görünür, güvenilir ve etkili hale gelmesini sağlayan kreatif ve performans odaklı bir reklam ajansıdır. Her marka için özel stratejiler geliştirir, doğru hedef kitleye doğru mesajla ulaşmayı hedefleriz.
+          </p>
+          <p>
+            Çalışma yaklaşımımız; strateji, yaratıcılık, analiz ve sürdürülebilir büyüme ekseninde şekillenir. Her adımda kurumsal iletişim, şeffaf ölçümleme ve premium marka deneyimi sunarız.
+          </p>
+          <div class="about-highlights">
+            <span>Stratejik planlama</span>
+            <span>Kreatif üretim</span>
+            <span>Veri analizi</span>
+          </div>
+        </div>
+
+        <div class="about-panel reveal">
+          <div class="panel-card">
+            <span>Çalışma yaklaşımı</span>
+            <strong>Net hedefler, güçlü marka dili, ölçülebilir sonuçlar.</strong>
+          </div>
+          <div class="panel-card">
+            <span>Odak alanları</span>
+            <ul>
+              <li>Kurumsal büyüme</li>
+              <li>Kitle doğruluğu</li>
+              <li>Performans optimizasyonu</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references" id="references">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Referanslar / Çalışma Alanı</span>
+          <h2>Farklı sektörlerde ölçeklenebilir sonuçlar</h2>
+          <p>Gerçek marka ismi kullanmadan, farklı iş modelleri için oluşturduğumuz çalışma alanlarını örnekliyoruz.</p>
+        </div>
+
+        <div class="references-grid">
+          <article class="reference-card reveal">
+            <h3>E-ticaret Markası</h3>
+            <p>Sosyal medya büyümesi</p>
+            <span>Ürün odaklı kreatifler, dönüşüm kampanyaları ve düzenli içerik planlamasıyla marka görünürlüğünü artıran yapı.</span>
+          </article>
+          <article class="reference-card reveal">
+            <h3>Yerel İşletme</h3>
+            <p>Marka bilinirliği</p>
+            <span>Bölgesel hedefleme, konum bazlı iletişim ve güven veren görsel dil ile yerel bilinirliği güçlendiren çalışma.</span>
+          </article>
+          <article class="reference-card reveal">
+            <h3>Güzellik Merkezi</h3>
+            <p>Reklam performansı</p>
+            <span>Randevu alma hedefi, hizmet paketleri ve mevsimsel kampanya dönemlerine göre optimize edilen reklam yapısı.</span>
+          </article>
+          <article class="reference-card reveal">
+            <h3>Restoran & Kafe</h3>
+            <p>İçerik etkileşimi</p>
+            <span>İştah açıcı görsel anlatım, konum duyuruları ve kampanya içerikleriyle sosyal medya etkileşimini artıran plan.</span>
+          </article>
+          <article class="reference-card reveal">
+            <h3>Hizmet Sektörü</h3>
+            <p>Güven inşası</p>
+            <span>Teklif talebi odaklı iletişim, kurumsal sunum dili ve referans bazlı içeriklerle güven algısını güçlendiren yaklaşım.</span>
+          </article>
+          <article class="reference-card reveal">
+            <h3>Mobil Uygulama</h3>
+            <p>Uygulama indirme büyümesi</p>
+            <span>Kurulum odaklı reklamlar, kullanım avantajı anlatımı ve kullanıcı kazanımını artıran performans optimizasyonu.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Çalışma Süreci</span>
+          <h2>Planlı, disiplinli ve şeffaf ilerleyen süreç</h2>
+          <p>Her projeyi aynı çerçevede değil, markanın gerçek ihtiyacına göre ele alırız.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step reveal">
+            <span class="step-number">01</span>
+            <h3>Analiz</h3>
+            <p>Marka hedeflerini, sektör dinamiklerini ve hedef kitle davranışlarını detaylı şekilde analiz ederiz.</p>
+          </article>
+          <article class="process-step reveal">
+            <span class="step-number">02</span>
+            <h3>Strateji</h3>
+            <p>İletişim dili, kanal planı ve kampanya kurgusunu performans hedeflerine göre yapılandırırız.</p>
+          </article>
+          <article class="process-step reveal">
+            <span class="step-number">03</span>
+            <h3>Uygulama</h3>
+            <p>Yaratıcı içerik ve reklam yönetimi süreçlerini marka standardına uygun biçimde hayata geçiririz.</p>
+          </article>
+          <article class="process-step reveal">
+            <span class="step-number">04</span>
+            <h3>Raporlama</h3>
+            <p>Gelişmeleri düzenli raporlarla paylaşır, büyümeyi veri temelli olarak sürekli optimize ederiz.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="container why-grid">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Neden Gönderi Medya?</span>
+          <h2>Kurumsal güven, yaratıcı üretim ve performans dengesi</h2>
+        </div>
+
+        <div class="why-list reveal">
+          <div class="why-item">Markaya özel strateji</div>
+          <div class="why-item">Şeffaf raporlama</div>
+          <div class="why-item">Kreatif içerik üretimi</div>
+          <div class="why-item">Performans odaklı reklam yönetimi</div>
+          <div class="why-item">Kurumsal iletişim dili</div>
+          <div class="why-item">Uzun vadeli büyüme yaklaşımı</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Blog</span>
+          <h2>Dijital pazarlamada yol gösteren içerikler</h2>
+          <p>Marka yöneticileri, girişimciler ve pazarlama ekipleri için hazırlanan pratik notlar ve sektörel bakış açıları.</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <div class="blog-meta">
+              <span>Rehber</span><span>6 dk okuma</span>
+            </div>
+            <h3>Sosyal Medya Yönetiminde Marka Dili Nasıl Kurulur?</h3>
+            <p>Tutarlı bir ton, yorum yönetimi ve görsel disiplin ile markanın dijital sesi nasıl güçlendirilir, örneklerle anlatır.</p>
+            <a href="blog.html#post-1">Detaylı oku</a>
+          </article>
+          <article class="blog-card reveal">
+            <div class="blog-meta">
+              <span>Reklam</span><span>5 dk okuma</span>
+            </div>
+            <h3>Google Ads Kampanyalarında Dönüşüm Odaklı Strateji</h3>
+            <p>Anahtar kelime yapısı, teklif mantığı ve reklam metinlerinin dönüşüm üzerindeki etkisini sade bir dille açıklar.</p>
+            <a href="blog.html#post-2">Detaylı oku</a>
+          </article>
+          <article class="blog-card reveal">
+            <div class="blog-meta">
+              <span>İçerik</span><span>4 dk okuma</span>
+            </div>
+            <h3>Kreatif İçerik Neden Performansı Etkiler?</h3>
+            <p>Görsel kalite, mesaj netliği ve teklif kurgusunun reklam performansına neden doğrudan etki ettiğini anlatır.</p>
+            <a href="blog.html#post-3">Detaylı oku</a>
+          </article>
+          <article class="blog-card reveal">
+            <div class="blog-meta">
+              <span>SEO / Yerel</span><span>6 dk okuma</span>
+            </div>
+            <h3>Yerel İşletmeler İçin Dijital Görünürlük Rehberi</h3>
+            <p>Konum bazlı görünürlük, harita kayıtları ve sosyal kanıtın yerel işletmelere sağladığı avantajları özetler.</p>
+            <a href="blog.html#post-4">Detaylı oku</a>
+          </article>
+        </div>
+
+        <div class="blog-cta reveal">
+          <a class="btn btn-secondary" href="blog.html">Tüm Blog Yazılarını Gör</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="#home">
+          <span class="logo-mark"><img class="site-logo" src="assets/gonderi-medya-logo.jpeg" alt="" aria-hidden="true" loading="lazy" /></span>
+          <span class="logo-text">Gönderi Medya</span>
+        </a>
+        <p class="footer-text">Markaların dijital dünyada güven veren, resmi ve premium bir konuma ulaşmasını sağlayan reklam ajansı.</p>
+      </div>
+
+      <div>
+        <h3>Menü</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="hizmetler.html">Hizmetler</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#references">Referanslar</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#process">Süreç</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Hizmetler</h3>
+        <ul class="footer-links">
+          <li><a href="hizmetler.html">Sosyal Medya Yönetimi</a></li>
+          <li><a href="hizmetler.html">Meta Reklamları</a></li>
+          <li><a href="hizmetler.html">Google Reklamları</a></li>
+          <li><a href="hizmetler.html">İçerik Üretimi</a></li>
+          <li><a href="hizmetler.html">Marka Danışmanlığı</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Gönderi Medya. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
