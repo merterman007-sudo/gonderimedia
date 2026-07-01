@@ -252,6 +252,7 @@ img {
 }
 
 .hero h1,
+.hero h2,
 .section-heading h2,
 .about-content h2,
 .contact-info h2,
@@ -284,7 +285,8 @@ img {
   margin: 0 0 14px;
 }
 
-.hero h1 {
+.hero h1,
+.hero h2 {
   font-size: clamp(2.4rem, 5vw, 4.9rem);
   max-width: 16ch;
 }
@@ -543,44 +545,69 @@ img {
 }
 
 .lead-section {
-  padding-top: 42px;
-  padding-bottom: 24px;
+  padding-top: 34px;
+  padding-bottom: 30px;
 }
 
 .lead-grid {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
-  gap: 26px;
+  gap: 30px;
   align-items: stretch;
-  padding: 24px;
+  padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: calc(var(--radius-xl) + 4px);
   background:
-    radial-gradient(circle at top left, rgba(121, 216, 201, 0.08), transparent 30%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(10, 10, 11, 0.92));
+    linear-gradient(90deg, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.74) 43%, rgba(5, 5, 5, 0.40) 100%),
+    linear-gradient(180deg, rgba(7, 8, 10, 0.40), rgba(7, 8, 10, 0.86)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&fm=jpg&q=82&w=1800") center right / cover;
   box-shadow: var(--shadow);
+  min-height: 620px;
+  overflow: hidden;
+  position: relative;
+}
+
+.lead-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 24% 12%, rgba(121, 216, 201, 0.18), transparent 28%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 36%);
+  pointer-events: none;
+}
+
+.lead-grid::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(5, 5, 5, 0.72));
+  pointer-events: none;
 }
 
 .lead-copy {
-  padding: 12px 10px 12px 8px;
+  padding: 16px 12px 16px 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
-.lead-copy h2 {
+.lead-copy h1 {
   margin: 16px 0 0;
-  max-width: 14ch;
+  max-width: 13ch;
   font-size: clamp(1.9rem, 3vw, 3.1rem);
   line-height: 1.05;
   color: var(--heading);
-  text-shadow: 0 0 16px rgba(255, 255, 255, 0.08);
+  text-shadow: 0 12px 34px rgba(0, 0, 0, 0.50);
 }
 
 .lead-copy p {
   margin: 18px 0 0;
-  max-width: 52ch;
-  color: var(--muted);
+  max-width: 50ch;
+  color: #d6dbe4;
   line-height: 1.75;
 }
 
@@ -597,22 +624,36 @@ img {
   min-height: 38px;
   padding: 0 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.09);
   color: #e9edf3;
   font-size: 0.9rem;
+  backdrop-filter: blur(12px);
 }
 
 .lead-card {
-  padding: 22px;
+  padding: 24px;
   border-radius: calc(var(--radius-xl) + 4px);
-  border: 1px solid var(--line);
-  background: rgba(9, 13, 24, 0.85);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(180deg, rgba(12, 15, 22, 0.84), rgba(5, 6, 9, 0.92));
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.58),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  position: relative;
+  z-index: 1;
 }
 
 .lead-form {
   gap: 14px;
+}
+
+.lead-card .form-row input,
+.lead-card .form-row select,
+.lead-card .form-row textarea {
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .stats {
@@ -1398,8 +1439,15 @@ img {
     min-height: auto;
   }
 
-  .lead-copy h2 {
+  .lead-copy h1 {
     max-width: 100%;
+  }
+
+  .lead-grid {
+    min-height: auto;
+    background:
+      linear-gradient(180deg, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.94)),
+      url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&fm=jpg&q=82&w=1400") center / cover;
   }
 
   .page-hero-grid {
@@ -1470,7 +1518,8 @@ img {
     padding-top: 58px;
   }
 
-  .hero h1 {
+  .hero h1,
+  .hero h2 {
     max-width: 100%;
   }
 
@@ -1480,10 +1529,26 @@ img {
 
   .lead-grid {
     padding: 18px;
+    gap: 18px;
+    border-radius: 24px;
   }
 
   .lead-card {
     padding: 18px;
+    border-radius: 22px;
+  }
+
+  .lead-copy {
+    padding: 6px 2px 0;
+  }
+
+  .lead-copy p {
+    line-height: 1.65;
+  }
+
+  .lead-badges span {
+    min-height: 34px;
+    font-size: 0.84rem;
   }
 
   .hero-visual {
