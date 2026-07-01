@@ -3,6 +3,23 @@
 const header = document.getElementById("site-header");
 const navToggle = document.getElementById("nav-toggle");
 const nav = document.getElementById("primary-navigation");
+const contactRecipient = "info@gonderimedia.com";
+
+document.querySelectorAll(".site-logo").forEach((logoImage) => {
+  const logoMark = logoImage.closest(".logo-mark");
+  if (!logoMark) return;
+
+  const showFallback = () => {
+    logoMark.classList.add("logo-missing");
+    logoImage.setAttribute("aria-hidden", "true");
+  };
+
+  logoImage.addEventListener("error", showFallback);
+
+  if (logoImage.complete && logoImage.naturalWidth === 0) {
+    showFallback();
+  }
+});
 
 // Header gets a subtle shadow after scrolling.
 window.addEventListener("scroll", () => {
@@ -43,7 +60,24 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
-// Forms do not send mail yet; show confirmation message instead.
+const buildMailBody = (formElement) => {
+  const data = new FormData(formElement);
+  const labels = {
+    name: "Ad Soyad",
+    company: "Firma",
+    phone: "Telefon",
+    email: "E-posta",
+    service: "Hizmet",
+    message: "Mesaj",
+  };
+
+  return Array.from(data.entries())
+    .filter(([, value]) => String(value).trim())
+    .map(([key, value]) => `${labels[key] || key}: ${String(value).trim()}`)
+    .join("\n");
+};
+
+// Static hosting has no backend, so forms open a ready-to-send email draft.
 const bindLeadForm = (formId, feedbackId) => {
   const formElement = document.getElementById(formId);
   const feedbackElement = document.getElementById(feedbackId);
@@ -52,7 +86,10 @@ const bindLeadForm = (formId, feedbackId) => {
 
   formElement.addEventListener("submit", (event) => {
     event.preventDefault();
-    feedbackElement.textContent = "Talebiniz alinmistir. En kisa surede sizinle iletisime gececegiz.";
+    const subject = encodeURIComponent(`Web sitesi teklif talebi - ${formElement.elements.name?.value || "Yeni talep"}`);
+    const body = encodeURIComponent(buildMailBody(formElement));
+    window.location.href = `mailto:${contactRecipient}?subject=${subject}&body=${body}`;
+    feedbackElement.textContent = "E-posta uygulamaniz aciliyor. Gonderimi tamamlamak icin taslagi onaylayin.";
     formElement.reset();
   });
 };

@@ -130,12 +130,33 @@ img {
     0 0 18px rgba(255, 255, 255, 0.08);
   overflow: hidden;
   flex: 0 0 auto;
+  position: relative;
+  color: #ffffff;
+}
+
+.logo-mark::before {
+  content: attr(data-fallback);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #17191d, #050506);
 }
 
 .site-logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
+  background: #050505;
+}
+
+.logo-mark.logo-missing .site-logo {
+  display: none;
 }
 
 .logo-text {
@@ -1437,10 +1458,12 @@ img {
   .nav a {
     padding: 14px 12px;
     border-radius: 12px;
+    color: #17191d;
   }
 
   .nav a:hover {
-    background: rgba(255, 255, 255, 0.04);
+    color: #050505;
+    background: rgba(0, 0, 0, 0.06);
   }
 
   .hero {

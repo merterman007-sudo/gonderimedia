@@ -10,11 +10,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-</head>
+  <link rel="canonical" href="https://gonderimedia.com/iletisim.html" />
+  <link rel="icon" type="image/jpeg" href="gonderi-medya-logo.jpeg" />
+  <link rel="apple-touch-icon" href="gonderi-medya-logo.jpeg" />
+  <meta property="og:url" content="https://gonderimedia.com/iletisim.html" />
+  <meta property="og:image" content="https://gonderimedia.com/gonderi-medya-logo.jpeg" />
+  <meta property="og:site_name" content="Gönderi Medya" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="İletişim | Gönderi Medya" />
+  <meta name="twitter:image" content="https://gonderimedia.com/gonderi-medya-logo.jpeg" /></head>
 <body>
   <header class="site-header" id="site-header">
     <div class="container nav-wrap">
-      <a class="logo" href="index.html"><span class="logo-mark"><img class="site-logo" src="assets/gonderi-medya-logo.jpeg" alt="" aria-hidden="true" loading="eager" /></span><span class="logo-text">Gönderi Medya</span></a>
+      <a class="logo" href="index.html"><span class="logo-mark" data-fallback="GM"><img class="site-logo" src="gonderi-medya-logo.jpeg" alt="" aria-hidden="true" loading="eager" /></span><span class="logo-text">Gönderi Medya</span></a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
       <nav class="nav" id="primary-navigation">
         <a href="index.html">Ana Sayfa</a>
@@ -40,7 +48,7 @@
           <h2>İletişim bilgileri</h2>
           <ul class="info-list">
             <li>Telefon: +90 5XX XXX XX XX</li>
-            <li>E-posta: info@gonderimedya.com</li>
+            <li>E-posta: info@gonderimedia.com</li>
             <li>Konum: İstanbul / Türkiye</li>
             <li>Instagram: @gonderimedya</li>
           </ul>
@@ -56,13 +64,13 @@
           <p>Talebinizi bırakın, en kısa sürede sizinle iletişime geçelim.</p>
           <div class="contact-cards">
             <div class="contact-card"><span>Telefon</span><a href="tel:+905000000000">+90 5XX XXX XX XX</a></div>
-            <div class="contact-card"><span>E-posta</span><a href="mailto:info@gonderimedya.com">info@gonderimedya.com</a></div>
+            <div class="contact-card"><span>E-posta</span><a href="mailto:info@gonderimedia.com">info@gonderimedia.com</a></div>
             <div class="contact-card"><span>Konum</span><p>İstanbul / Türkiye</p></div>
             <div class="contact-card"><span>Instagram</span><a href="https://www.instagram.com/gonderimedya/" target="_blank" rel="noreferrer">@gonderimedya</a></div>
           </div>
         </div>
         <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" id="contact-form" action="mailto:info@gonderimedia.com" method="post" enctype="text/plain">
             <div class="form-row"><label for="name">Ad Soyad</label><input id="name" name="name" type="text" placeholder="Ad Soyad" required /></div>
             <div class="form-row"><label for="company">Firma Adı</label><input id="company" name="company" type="text" placeholder="Firma Adı" required /></div>
             <div class="form-row"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" placeholder="Telefon numaranız" required /></div>
@@ -77,6 +85,10 @@
               <option>Marka Danışmanlığı</option>
               <option>Kurumsal Kimlik</option>
               <option>Web Site Tasarımı</option>
+              <option>Video Çekimi & Prodüksiyon</option>
+              <option>Kurgu & Montaj</option>
+              <option>Reels & Short Form İçerik</option>
+              <option>Drone & Sahne Çekimi</option>
             </select></div>
             <div class="form-row"><label for="message">Mesaj</label><textarea id="message" name="message" rows="5" placeholder="Projenizi kısaca anlatın" required></textarea></div>
             <button class="btn btn-primary btn-block" type="submit">Gönder</button>
@@ -90,7 +102,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="logo footer-logo" href="index.html"><span class="logo-mark"><img class="site-logo" src="assets/gonderi-medya-logo.jpeg" alt="" aria-hidden="true" loading="lazy" /></span><span class="logo-text">Gönderi Medya</span></a>
+        <a class="logo footer-logo" href="index.html"><span class="logo-mark" data-fallback="GM"><img class="site-logo" src="gonderi-medya-logo.jpeg" alt="" aria-hidden="true" loading="lazy" /></span><span class="logo-text">Gönderi Medya</span></a>
         <p class="footer-text">Markaların dijital dünyada güven veren, resmi ve premium bir konuma ulaşmasını sağlayan reklam ajansı.</p>
       </div>
       <div>
